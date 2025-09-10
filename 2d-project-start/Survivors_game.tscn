@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://jvfc2ctc4fa"]
+[gd_scene load_steps=7 format=3 uid="uid://jvfc2ctc4fa"]
 
 [ext_resource type="PackedScene" uid="uid://b80e4y8qcy4bm" path="res://player.tscn" id="1_627lb"]
 [ext_resource type="Script" uid="uid://ttfvcvfimax6" path="res://survivors_game.gd" id="1_hm2c2"]
+[ext_resource type="AudioStream" uid="uid://dqykndks2ut6i" path="res://audio/time_for_adventure.mp3" id="2_4mtju"]
 [ext_resource type="PackedScene" uid="uid://dhoib5kqnrepe" path="res://pine_tree.tscn" id="2_7ty7j"]
 [ext_resource type="AudioStream" uid="uid://b24od2o5auop5" path="res://audio/grunting_4_ian.wav" id="2_hm2c2"]
 
@@ -15,9 +16,15 @@ point_count = 5
 y_sort_enabled = true
 script = ExtResource("1_hm2c2")
 
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("2_4mtju")
+volume_db = -15.0
+autoplay = true
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_hm2c2")
-volume_db = -5.0
+volume_db = -10.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
