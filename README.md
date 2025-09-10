@@ -15,3 +15,6 @@ BGM Tutorial
 (https://www.youtube.com/watch?v=0EzYLP2wXHI)
     Audio found from
     https://brackeysgames.itch.io/brackeys-platformer-bundle/download/eyJleHBpcmVzIjoxNzU3NDgyOTI2LCJpZCI6MjU4NTUzNX0%3d.UN6GE%2fXIhj4Ew%2fPBF9sdGgtQz3M%3d
+
+
+This doesn't have 3 separate submissions because I misunderstood how to do the readme part, that's on me
