@@ -13,5 +13,5 @@ func _on_timer_timeout():
 
 
 func _on_player_health_depleted():
-	%GameOver.visible = true
-	get_tree().visible = true
+	%GameOver.show()
+	get_tree().paused = true

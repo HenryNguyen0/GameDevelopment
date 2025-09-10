@@ -3,8 +3,10 @@ extends CharacterBody2D
 var speed = randf_range(200, 300)
 var health = 3
 
-@onready var player = get_node("/root/Game/Player")
 
+var slime_counter = 0
+
+@onready var player = get_node("/root/Game/Player")
 
 func _ready():
 	%Slime.play_walk()
@@ -12,8 +14,9 @@ func _ready():
 
 func _physics_process(_delta):
 	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * speed
+	velocity = direction * (speed + slime_counter * 25)
 	move_and_slide()
+	
 
 
 func take_damage():
@@ -26,3 +29,7 @@ func take_damage():
 		get_parent().add_child(smoke)
 		smoke.global_position = global_position
 		queue_free()
+		slime_counter += 1
+		
+
+		
