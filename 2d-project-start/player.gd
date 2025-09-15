@@ -4,8 +4,10 @@ signal health_depleted
 
 @onready var audio = $"../AudioStreamPlayer"
 
-var health = 100.0
+@onready var hp_bar = $ProgressBar
 
+var health: float = 100.0
+var max_health: float = 100.0
 
 func _physics_process(delta):
 	const SPEED = 600.0
@@ -33,3 +35,18 @@ func _physics_process(delta):
 		
 		if health <= 0.0:
 			health_depleted.emit()
+			
+func _on_health_drop_picked_up():
+	health += 10
+	print("Player health:", health)
+	
+
+
+func _ready():
+	add_to_group("player")
+	hp_bar.max_value = max_health
+	hp_bar.value = health
+
+func increase_health(amount: int):
+	health = clamp(health + amount, 0, max_health)
+	hp_bar.value = health
