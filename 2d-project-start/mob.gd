@@ -8,6 +8,9 @@ var slime_counter = 0
 
 @onready var player = get_node("/root/Game/Player")
 
+@onready var level_up = get_node("/root/Game/LevelUp")
+
+
 const HEALTH_DROP: PackedScene = preload("res://health_drop.tscn")
 
 func _ready():
@@ -34,6 +37,8 @@ func take_damage():
 		drop_item()
 		queue_free()
 		
+		level_up.enemy_killed()  # notify the manager
+	# existing smoke + drops + queue_free()
 			
 
 func random():

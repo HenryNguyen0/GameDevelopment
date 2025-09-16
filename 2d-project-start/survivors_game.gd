@@ -8,6 +8,8 @@ func spawn_mob():
 	new_mob.global_position = %PathFollow2D.global_position
 	add_child(new_mob)
 	
+	new_mob.add_to_group("Enemies")
+	
 	if !audio.is_playing():
 			audio.play()
 

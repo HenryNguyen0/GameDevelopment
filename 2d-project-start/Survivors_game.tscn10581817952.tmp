@@ -112,8 +112,7 @@ offset_bottom = 29.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 80
-text = "Level Complete!
-Space to Continue"
+text = "Level Complete!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
