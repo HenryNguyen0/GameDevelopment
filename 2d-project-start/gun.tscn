@@ -7,10 +7,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_dk5gl"]
 radius = 266.993
 
-[node name="Gun" type="Area2D"]
+[node name="Gun" type="Area2D" node_paths=PackedStringArray("shooting_point")]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_dk5gl")
+shooting_point = NodePath("WeaponPivot/Pistol/ShootingPoint")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_dk5gl")
@@ -26,10 +27,5 @@ unique_name_in_owner = true
 position = Vector2(25, -11)
 
 [node name="Bullet" parent="WeaponPivot/Pistol/ShootingPoint" instance=ExtResource("3_kw0bs")]
+visible = false
 position = Vector2(1194, 345)
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.3
-autostart = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

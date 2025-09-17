@@ -2,6 +2,7 @@ extends Node
 
 var kills: int = 0
 var kills_needed: int = 5
+var current_level: int = 1
 
 @export var level_up_label: Label
 
@@ -30,7 +31,6 @@ func level_complete():
 	else:
 		push_error("LevelUpLabel not assigned in Inspector!")
 
-	
 	get_tree().paused = true
 
 	# Wait until the player presses Space
@@ -43,9 +43,22 @@ func level_complete():
 
 	# Prepare next round
 	kills = 0
-	kills_needed += 2 
+	kills_needed += 2
+	current_level += 1
 	if kill_counter_label:
 		kill_counter_label.text = "Kills: %d/%d" % [kills, kills_needed]
+
+	# Activate second gun if level >= 2
+	var player = get_node("/root/Game/Player")
+	var gun2 = null  # declare variable in the current scope
+
+	if player != null and current_level >= 2:
+		gun2 = player.get_node("Gun2")
+
+	if gun2 != null:
+		gun2.set_process(true)    # allow _process() to run
+		gun2.visible = true       # show sprite        # show sprite
+	
 
 	reset_level()
 
@@ -71,3 +84,4 @@ func reset_level():
 
 	if enemy_spawner_timer:
 		enemy_spawner_timer.start()
+		
