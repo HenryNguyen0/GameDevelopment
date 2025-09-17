@@ -72,9 +72,8 @@ func reset_level():
 	player.global_position = player_start_position
 	player.health = player.max_health
 
-	# Remove existing enemies
-	for enemy in get_tree().get_nodes_in_group("Enemies"):
-		enemy.queue_free()
+	get_tree().call_group("Enemies", "queue_free")
+	get_tree().call_group("Health", "queue_free")
 
 	if path_follow:
 		path_follow.progress_ratio = randf()

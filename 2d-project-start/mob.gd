@@ -54,3 +54,4 @@ func drop_item():
 		get_parent().call_deferred("add_child", health_drop)
 		
 		health_drop.call_deferred("set", "global_position", global_position)
+		

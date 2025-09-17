@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_5erkm"]
 radius = 25.02
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["Health"]]
 script = ExtResource("1_5erkm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

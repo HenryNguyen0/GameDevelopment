@@ -16,10 +16,23 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	if velocity.length() > 0.0:
-		%HappyBoo.play_walk_animation()
+	if velocity.length() > 0:
+		$AnimatedSprite2D.play()
 	else:
-		%HappyBoo.play_idle_animation()
+		$AnimatedSprite2D.animation = "default"
+		
+		
+	if velocity.x < 0:
+		$AnimatedSprite2D.animation = "left"
+	
+	if velocity.x > 0:
+		$AnimatedSprite2D.animation = "right"
+		
+	if velocity.y < 0:
+		$AnimatedSprite2D.animation = "up"
+		
+	if velocity.y > 0:
+		$AnimatedSprite2D.animation = "down"
 	
 	# Taking damage
 	const DAMAGE_RATE = 10.0
