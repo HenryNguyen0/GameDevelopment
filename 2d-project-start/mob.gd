@@ -37,8 +37,7 @@ func take_damage():
 		drop_item()
 		queue_free()
 		
-		level_up.enemy_killed()  # notify the manager
-	# existing smoke + drops + queue_free()
+		level_up.enemy_killed()
 			
 
 func random():
@@ -54,5 +53,4 @@ func drop_item():
 		
 		get_parent().call_deferred("add_child", health_drop)
 		
-		# create health pack at position of slime
 		health_drop.call_deferred("set", "global_position", global_position)

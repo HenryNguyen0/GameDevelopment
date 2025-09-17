@@ -33,10 +33,8 @@ func level_complete():
 
 	get_tree().paused = true
 
-	# Wait until the player presses Space
 	await wait_for_space()
 
-	# Hide the label and unpause
 	if level_up_label:
 		level_up_label.visible = false
 	get_tree().paused = false
@@ -48,16 +46,15 @@ func level_complete():
 	if kill_counter_label:
 		kill_counter_label.text = "Kills: %d/%d" % [kills, kills_needed]
 
-	# Activate second gun if level >= 2
 	var player = get_node("/root/Game/Player")
-	var gun2 = null  # declare variable in the current scope
+	var gun2 = null
 
 	if player != null and current_level >= 2:
 		gun2 = player.get_node("Gun2")
 
 	if gun2 != null:
-		gun2.set_process(true)    # allow _process() to run
-		gun2.visible = true       # show sprite        # show sprite
+		gun2.set_process(true)  
+		gun2.visible = true     
 	
 
 	reset_level()
