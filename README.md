@@ -24,3 +24,6 @@ https://doshrosity.itch.io/32x32-health-ui
 
 
 Getting a kill counter system took about 3 hours. It was annoying and the worst thing I've had to do because doing it in Godot was just weird to learn.
+
+
+Adding a second gun had a lot of issues and bugfixing. Took about 2 hours
