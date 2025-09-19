@@ -171,9 +171,8 @@ script = ExtResource("1_onrkg")
 position = Vector2(0, -47)
 scale = Vector2(5.25, 5.25)
 sprite_frames = SubResource("SpriteFrames_pbfsw")
-animation = &"right"
-frame = 2
-frame_progress = 0.449975
+animation = &"down"
+frame_progress = 0.824519
 
 [node name="HappyBoo" parent="." instance=ExtResource("1_4flbx")]
 unique_name_in_owner = true
