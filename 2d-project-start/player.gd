@@ -4,6 +4,8 @@ signal health_depleted
 
 @onready var audio = $"../AudioStreamPlayer"
 
+@onready var pickupSound = $HealthSound
+
 @onready var hp_bar = $ProgressBar
 
 var health: float = 100.0
@@ -20,7 +22,6 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.animation = "default"
-		
 		
 	if velocity.x < 0:
 		$AnimatedSprite2D.animation = "left"
@@ -49,11 +50,6 @@ func _physics_process(delta):
 		if health <= 0.0:
 			health_depleted.emit()
 			
-func _on_health_drop_picked_up():
-	health += 10
-	print("Player health:", health)
-	
-
 
 func _ready():
 	add_to_group("player")
@@ -63,3 +59,7 @@ func _ready():
 func increase_health(amount: int):
 	health = clamp(health + amount, 0, max_health)
 	hp_bar.value = health
+	
+	if pickupSound:
+		pickupSound.stop()
+		pickupSound.play()

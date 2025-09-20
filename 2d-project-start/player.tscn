@@ -1,9 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://b80e4y8qcy4bm"]
+[gd_scene load_steps=27 format=3 uid="uid://b80e4y8qcy4bm"]
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://dex3bvysojubd" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://chmy0b58bv4qj" path="res://Small-8-Direction-Characters_by_AxulArt.png" id="2_hqtel"]
 [ext_resource type="PackedScene" uid="uid://taulhakd8bwf" path="res://gun.tscn" id="3_i3pqv"]
+[ext_resource type="AudioStream" uid="uid://6km4l5dxt58s" path="res://audio/051_use_item_01.wav" id="5_sweqy"]
+[ext_resource type="AudioStream" uid="uid://cfyq44iwvl3su" path="res://audio/762x39 Single Isolated WAV.wav" id="6_2hs0m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
 atlas = ExtResource("2_hqtel")
@@ -214,3 +216,13 @@ theme_override_styles/background = SubResource("StyleBoxFlat_i3pqv")
 theme_override_styles/fill = SubResource("StyleBoxFlat_hqtel")
 value = 100.0
 show_percentage = false
+
+[node name="HealthSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-3.76006, 9.23365)
+scale = Vector2(0.963131, 0.992014)
+stream = ExtResource("5_sweqy")
+
+[node name="GunSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-3.76006, 9.23365)
+scale = Vector2(0.963131, 0.992014)
+stream = ExtResource("6_2hs0m")

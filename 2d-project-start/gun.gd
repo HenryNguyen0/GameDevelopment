@@ -4,6 +4,8 @@ class_name Player
 
 @export var shooting_point: Node2D
 
+@onready var GunSound = $"../GunSound"
+
 func _process(_delta):
 	
 	var mouse_pos = get_global_mouse_position()
@@ -16,6 +18,10 @@ func _process(_delta):
 func shoot():
 	if shooting_point == null:
 		return
+
+	if GunSound:
+		GunSound.stop()
+		GunSound.play()
 
 	const BULLET = preload("res://bullet.tscn")
 	var new_bullet = BULLET.instantiate()

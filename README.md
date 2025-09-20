@@ -27,3 +27,12 @@ Getting a kill counter system took about 3 hours. It was annoying and the worst 
 
 
 Adding a second gun had a lot of issues and bugfixing. Took about 2 hours
+
+Changing sprite and making animation to walk 4 cardinal directions. 1 hour
+https://axulart.itch.io/small-8-direction-characters
+
+Making health pack have sound effect 1 hour
+https://heltonyan.itch.io/pixelcombat
+
+Gun sound effect 1 hour
+https://f8studios.itch.io/snakes-authentic-gun-sounds
