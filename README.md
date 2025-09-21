@@ -36,3 +36,5 @@ https://heltonyan.itch.io/pixelcombat
 
 Gun sound effect 1 hour
 https://f8studios.itch.io/snakes-authentic-gun-sounds
+
+I am getting oral surgery done on Monday so I unfortunately have to make my video early because I will not be able to speak in my video.
