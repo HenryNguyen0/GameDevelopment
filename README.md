@@ -38,3 +38,18 @@ Gun sound effect 1 hour
 https://f8studios.itch.io/snakes-authentic-gun-sounds
 
 I am getting oral surgery done on Monday so I unfortunately have to make my video early because I will not be able to speak in my video.
+
+https://gameuidatabase.com/gameData.php?id=2187&autoload=91776
+
+Wireframe - 30 minutes
+
+https://www.figma.com/board/fvU4AYJrnLPyShofarZraF/Game-Dev?node-id=0-1&t=I2DK3cJGgpdHwNb1-1
+
+
+Inspiration for Menu
+
+https://gameuidatabase.com/gameData.php?id=2187
+
+Options menu creation - 2 hours
+
+More HP and Less Slimes implementation - 3 hours
