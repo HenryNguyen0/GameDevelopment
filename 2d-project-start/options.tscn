@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccy4mg335g5yd"]
+
+[ext_resource type="Script" uid="uid://dvnakfqkftdbs" path="res://options.gd" id="1_5v8ap"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5v8ap")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1932.0
+offset_bottom = 1090.0
+color = Color(0.0823529, 0.34902, 0.247059, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_right = 31.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "Options"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 818.0
+offset_top = 245.0
+offset_right = 1127.0
+offset_bottom = 566.0
+
+[node name="MoreHealth" type="CheckBox" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "More Health"
+alignment = 1
+
+[node name="LessSlimes" type="CheckBox" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Less Slimes"
+alignment = 1
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Exit"

@@ -153,14 +153,14 @@ radius = 29.15
 radius = 34.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3pqv"]
-bg_color = Color(0.152941, 0.168627, 0.188235, 1)
+bg_color = Color(0.768627, 0.113725, 0.239216, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqtel"]
-bg_color = Color(0.623529, 0.866667, 0.317647, 1)
+bg_color = Color(0.617919, 0.874194, 0, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -189,12 +189,12 @@ shape = SubResource("CircleShape2D_onrkg")
 
 [node name="Gun" parent="." instance=ExtResource("3_i3pqv")]
 unique_name_in_owner = true
-position = Vector2(48, 39)
+position = Vector2(-4, 39)
 
 [node name="Gun2" parent="." instance=ExtResource("3_i3pqv")]
 unique_name_in_owner = true
 visible = false
-position = Vector2(0, 12)
+position = Vector2(-19, 12)
 
 [node name="HurtBox" type="Area2D" parent="."]
 unique_name_in_owner = true
