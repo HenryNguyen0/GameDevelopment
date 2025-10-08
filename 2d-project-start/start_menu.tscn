@@ -59,6 +59,12 @@ text = "Options
 "
 metadata/_edit_use_anchors_ = true
 
+[node name="Controls" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Controls
+"
+
 [node name="QuitGame" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
